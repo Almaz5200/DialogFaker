@@ -44,6 +44,8 @@ class MesPickViewController: UIViewController, UIImagePickerControllerDelegate, 
                 messagesVC.senderId = "sender"
                 messagesVC.senderDisplayName = "sender"
                 
+                messagesVC.styleType = self.typePick.selectedSegmentIndex
+                
                 self.navigationController?.showViewController(messagesVC, sender: self)
             }
             .addDisposableTo(disposeBag)

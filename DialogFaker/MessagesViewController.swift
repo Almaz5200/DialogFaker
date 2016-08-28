@@ -13,23 +13,46 @@ import RxSwift
 class MessagesViewController: JSQMessagesViewController {
     
     var messages = [JSQMessage]()
+    
     var outgoingBubbleImageView: JSQMessagesBubbleImage!
     var incomingBubbleImageView: JSQMessagesBubbleImage!
+    var incomingBubbleColor = UIColor.whiteColor()
+    var outgoingBubbleColor = UIColor.whiteColor()
+    
+    var outgoingBubbleTextColor = UIColor.whiteColor()
+    var incomingBubbleTextColor = UIColor.whiteColor()
     
     var opponentName: String?
     var opponentAvatar: UIImage?
     
+    var styleType = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.topItem?.title = ""
-        
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 87/255, green: 130/255, blue: 178/255, alpha: 1)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        
-        collectionView.backgroundColor = UIColor(red: 237/255, green: 243/255, blue: 250/255, alpha: 1)
+        switch styleType {
+        case 0:
+            collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSizeZero
+            collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero
+            
+            self.navigationController?.navigationBar.topItem?.title = ""
+            
+            UIApplication.sharedApplication().statusBarStyle = .LightContent
+            
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 87/255, green: 130/255, blue: 178/255, alpha: 1)
+            self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+            
+            collectionView.backgroundColor = UIColor(red: 237/255, green: 243/255, blue: 250/255, alpha: 1)
+            
+            incomingBubbleColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            outgoingBubbleColor = UIColor(red: 205/255, green: 226/255, blue: 250/255, alpha: 1)
+            
+            outgoingBubbleTextColor = UIColor.blackColor()
+            incomingBubbleTextColor = UIColor.blackColor()
+
+        default:
+            print("Error")
+        }
         
         setupBubbles()
         
@@ -51,8 +74,8 @@ class MessagesViewController: JSQMessagesViewController {
     
     private func setupBubbles() {
         let factory = JSQMessagesBubbleImageFactory()
-        outgoingBubbleImageView = factory.outgoingMessagesBubbleImageWithColor(UIColor(red: 205/255, green: 226/255, blue: 250/255, alpha: 1))
-        incomingBubbleImageView = factory.incomingMessagesBubbleImageWithColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1))
+        outgoingBubbleImageView = factory.outgoingMessagesBubbleImageWithColor(outgoingBubbleColor)
+        incomingBubbleImageView = factory.incomingMessagesBubbleImageWithColor(incomingBubbleColor)
     }
     
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
@@ -68,7 +91,11 @@ class MessagesViewController: JSQMessagesViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as! JSQMessagesCollectionViewCell
         
-        cell.textView!.textColor = UIColor.blackColor()
+        if messages[indexPath.row].senderId == self.senderId {
+            cell.textView!.textColor = outgoingBubbleTextColor
+        } else {
+            cell.textView.textColor = incomingBubbleTextColor
+        }
         
         return cell
     }
