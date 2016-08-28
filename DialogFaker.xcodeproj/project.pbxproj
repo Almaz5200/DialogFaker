@@ -176,7 +176,7 @@
 				TargetAttributes = {
 					3925E0DA1D7316DC00FCD8AF = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = VZB2Q96A5B;
+						DevelopmentTeam = 4KD9JBQZ28;
 					};
 					3925E0EE1D7316DC00FCD8AF = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -409,10 +409,13 @@
 			baseConfigurationReference = 99BC5DB1F01C95D7D0BAA8A9 /* Pods-DialogFaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DialogFaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Almaz5200.DialogFaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -421,10 +424,13 @@
 			baseConfigurationReference = 98FF44EAF66CA56A724893A7 /* Pods-DialogFaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DialogFaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Almaz5200.DialogFaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
