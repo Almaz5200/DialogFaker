@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3925E0DF1D7316DC00FCD8AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925E0DE1D7316DC00FCD8AF /* AppDelegate.swift */; };
-		3925E0E11D7316DC00FCD8AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925E0E01D7316DC00FCD8AF /* ViewController.swift */; };
+		3925E0E11D7316DC00FCD8AF /* MesPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925E0E01D7316DC00FCD8AF /* MesPickViewController.swift */; };
 		3925E0E41D7316DC00FCD8AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3925E0E21D7316DC00FCD8AF /* Main.storyboard */; };
 		3925E0E61D7316DC00FCD8AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3925E0E51D7316DC00FCD8AF /* Assets.xcassets */; };
 		3925E0E91D7316DC00FCD8AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3925E0E71D7316DC00FCD8AF /* LaunchScreen.storyboard */; };
 		3925E0F41D7316DC00FCD8AF /* DialogFakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925E0F31D7316DC00FCD8AF /* DialogFakerTests.swift */; };
 		3925E0FF1D731AA300FCD8AF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3925E0FE1D731AA300FCD8AF /* Podfile */; };
+		3925E1011D731E2B00FCD8AF /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925E1001D731E2B00FCD8AF /* MessagesViewController.swift */; };
 		706694C071B3E1BB945E510C /* Pods_DialogFaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49069F304CC36ECCCED7F7FD /* Pods_DialogFaker.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +31,7 @@
 /* Begin PBXFileReference section */
 		3925E0DB1D7316DC00FCD8AF /* DialogFaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DialogFaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3925E0DE1D7316DC00FCD8AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3925E0E01D7316DC00FCD8AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3925E0E01D7316DC00FCD8AF /* MesPickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesPickViewController.swift; sourceTree = "<group>"; };
 		3925E0E31D7316DC00FCD8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3925E0E51D7316DC00FCD8AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3925E0E81D7316DC00FCD8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +40,7 @@
 		3925E0F31D7316DC00FCD8AF /* DialogFakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogFakerTests.swift; sourceTree = "<group>"; };
 		3925E0F51D7316DC00FCD8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3925E0FE1D731AA300FCD8AF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		3925E1001D731E2B00FCD8AF /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		49069F304CC36ECCCED7F7FD /* Pods_DialogFaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DialogFaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98FF44EAF66CA56A724893A7 /* Pods-DialogFaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DialogFaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-DialogFaker/Pods-DialogFaker.release.xcconfig"; sourceTree = "<group>"; };
 		99BC5DB1F01C95D7D0BAA8A9 /* Pods-DialogFaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DialogFaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DialogFaker/Pods-DialogFaker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,7 +90,7 @@
 			children = (
 				3925E0FE1D731AA300FCD8AF /* Podfile */,
 				3925E0DE1D7316DC00FCD8AF /* AppDelegate.swift */,
-				3925E0E01D7316DC00FCD8AF /* ViewController.swift */,
+				3925E1021D731E3200FCD8AF /* ViewControllers */,
 				3925E0E21D7316DC00FCD8AF /* Main.storyboard */,
 				3925E0E51D7316DC00FCD8AF /* Assets.xcassets */,
 				3925E0E71D7316DC00FCD8AF /* LaunchScreen.storyboard */,
@@ -104,6 +106,15 @@
 				3925E0F51D7316DC00FCD8AF /* Info.plist */,
 			);
 			path = DialogFakerTests;
+			sourceTree = "<group>";
+		};
+		3925E1021D731E3200FCD8AF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3925E0E01D7316DC00FCD8AF /* MesPickViewController.swift */,
+				3925E1001D731E2B00FCD8AF /* MessagesViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		EFEA8FE07B05736DDD9AB316 /* Frameworks */ = {
@@ -278,7 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3925E0E11D7316DC00FCD8AF /* ViewController.swift in Sources */,
+				3925E1011D731E2B00FCD8AF /* MessagesViewController.swift in Sources */,
+				3925E0E11D7316DC00FCD8AF /* MesPickViewController.swift in Sources */,
 				3925E0DF1D7316DC00FCD8AF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

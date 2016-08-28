@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MesPickViewController.swift
 //  DialogFaker
 //
 //  Created by Артем Трубачеев on 28/08/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MesPickViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
