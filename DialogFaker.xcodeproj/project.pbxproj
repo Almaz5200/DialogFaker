@@ -13,6 +13,8 @@
 		3925E0E61D7316DC00FCD8AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3925E0E51D7316DC00FCD8AF /* Assets.xcassets */; };
 		3925E0E91D7316DC00FCD8AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3925E0E71D7316DC00FCD8AF /* LaunchScreen.storyboard */; };
 		3925E0F41D7316DC00FCD8AF /* DialogFakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925E0F31D7316DC00FCD8AF /* DialogFakerTests.swift */; };
+		3925E0FF1D731AA300FCD8AF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3925E0FE1D731AA300FCD8AF /* Podfile */; };
+		706694C071B3E1BB945E510C /* Pods_DialogFaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49069F304CC36ECCCED7F7FD /* Pods_DialogFaker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,10 @@
 		3925E0EF1D7316DC00FCD8AF /* DialogFakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DialogFakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3925E0F31D7316DC00FCD8AF /* DialogFakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogFakerTests.swift; sourceTree = "<group>"; };
 		3925E0F51D7316DC00FCD8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3925E0FE1D731AA300FCD8AF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		49069F304CC36ECCCED7F7FD /* Pods_DialogFaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DialogFaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98FF44EAF66CA56A724893A7 /* Pods-DialogFaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DialogFaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-DialogFaker/Pods-DialogFaker.release.xcconfig"; sourceTree = "<group>"; };
+		99BC5DB1F01C95D7D0BAA8A9 /* Pods-DialogFaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DialogFaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DialogFaker/Pods-DialogFaker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706694C071B3E1BB945E510C /* Pods_DialogFaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +69,8 @@
 				3925E0DD1D7316DC00FCD8AF /* DialogFaker */,
 				3925E0F21D7316DC00FCD8AF /* DialogFakerTests */,
 				3925E0DC1D7316DC00FCD8AF /* Products */,
+				F7A3D0D4DC676F21D5E5C755 /* Pods */,
+				EFEA8FE07B05736DDD9AB316 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +86,7 @@
 		3925E0DD1D7316DC00FCD8AF /* DialogFaker */ = {
 			isa = PBXGroup;
 			children = (
+				3925E0FE1D731AA300FCD8AF /* Podfile */,
 				3925E0DE1D7316DC00FCD8AF /* AppDelegate.swift */,
 				3925E0E01D7316DC00FCD8AF /* ViewController.swift */,
 				3925E0E21D7316DC00FCD8AF /* Main.storyboard */,
@@ -96,6 +106,23 @@
 			path = DialogFakerTests;
 			sourceTree = "<group>";
 		};
+		EFEA8FE07B05736DDD9AB316 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49069F304CC36ECCCED7F7FD /* Pods_DialogFaker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7A3D0D4DC676F21D5E5C755 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99BC5DB1F01C95D7D0BAA8A9 /* Pods-DialogFaker.debug.xcconfig */,
+				98FF44EAF66CA56A724893A7 /* Pods-DialogFaker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3925E0F81D7316DC00FCD8AF /* Build configuration list for PBXNativeTarget "DialogFaker" */;
 			buildPhases = (
+				ED089BB5A716830CA15ABB78 /* 📦 Check Pods Manifest.lock */,
 				3925E0D71D7316DC00FCD8AF /* Sources */,
 				3925E0D81D7316DC00FCD8AF /* Frameworks */,
 				3925E0D91D7316DC00FCD8AF /* Resources */,
+				E1454F7F3EAD79A2C473FF4E /* 📦 Embed Pods Frameworks */,
+				3FBB791FF31B7B8EA87ABA2E /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,6 +211,7 @@
 			files = (
 				3925E0E91D7316DC00FCD8AF /* LaunchScreen.storyboard in Resources */,
 				3925E0E61D7316DC00FCD8AF /* Assets.xcassets in Resources */,
+				3925E0FF1D731AA300FCD8AF /* Podfile in Resources */,
 				3925E0E41D7316DC00FCD8AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +224,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FBB791FF31B7B8EA87ABA2E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DialogFaker/Pods-DialogFaker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1454F7F3EAD79A2C473FF4E /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DialogFaker/Pods-DialogFaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED089BB5A716830CA15ABB78 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3925E0D71D7316DC00FCD8AF /* Sources */ = {
@@ -327,6 +406,7 @@
 		};
 		3925E0F91D7316DC00FCD8AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99BC5DB1F01C95D7D0BAA8A9 /* Pods-DialogFaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DialogFaker/Info.plist;
@@ -338,6 +418,7 @@
 		};
 		3925E0FA1D7316DC00FCD8AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98FF44EAF66CA56A724893A7 /* Pods-DialogFaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DialogFaker/Info.plist;
@@ -390,6 +471,7 @@
 				3925E0FA1D7316DC00FCD8AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3925E0FB1D7316DC00FCD8AF /* Build configuration list for PBXNativeTarget "DialogFakerTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +480,7 @@
 				3925E0FD1D7316DC00FCD8AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
