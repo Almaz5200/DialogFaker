@@ -27,6 +27,20 @@ class MessagesViewController: JSQMessagesViewController {
     
     var styleType = 0
     
+    func sendMessage(text: String) {
+        let alert = UIAlertController(title: "Отправитель", message: "Выберете отправителя", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Собеседник", style: .Default, handler: { _ in
+            self.messages.append(JSQMessage(senderId: "opponent", displayName: "opponent", text: text))
+            self.finishSendingMessage()
+        }))
+        alert.addAction(UIAlertAction(title: "Я", style: .Default, handler: { _ in
+            self.messages.append(JSQMessage(senderId: "sender", displayName: "sender", text: text))
+            self.finishSendingMessage()
+        }))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,7 +93,7 @@ class MessagesViewController: JSQMessagesViewController {
     }
     
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
-        
+        sendMessage(text)
     }
     
     override func didPressAccessoryButton(sender: UIButton!) {}
